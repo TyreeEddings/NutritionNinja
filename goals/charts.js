@@ -11,10 +11,10 @@ new Chart(cal, {
         }]
     },
     options: {
+        responsive: false,
         scales: {
             y: {
                 beginAtZero: true,
-                responsive: false
             }
         }
     }
