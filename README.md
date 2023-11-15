@@ -6,7 +6,7 @@
 - Malnutrition is a huge problem in our world. When we think of "Malnutrition", we think of the pictures of malnourished african children we so often see on the web. That's only a PART of the problem. Malnutrition isn't just eating "too little" or "too much", it's about overall *poor* nutrition. Good nutrition is often overlooked by the younger generations
 
 ## Where can you find the application?
-*TYREE ADD THE WEB LINK HERE*
+[You can find the Nutrition Ninja Web application here!](https://tyreeeddings.github.io/nutritionninja/)
 
 ## How do you use the application?
 *ADD THIS PLEASE*
