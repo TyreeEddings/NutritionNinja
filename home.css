@@ -1,0 +1,90 @@
+.header {
+    
+    text-align:Center;
+    line-height:100px;
+    font-family: "Copperplate", "Courier New", monospace;
+    font-size: 32px;
+    color: #1be5f3;
+}
+.nav{
+    border:1px solid white;
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0px 70px 70px  ;
+    text-align:center;
+    line-height: 0px
+}  
+.nav li{
+    display:inline;
+}
+.nav a{
+    display:inline-block;
+    padding:10px;
+}     
+  
+
+
+ul.nav li a {
+  transition: color 0.2s linear;
+  font-size: 18px;
+}
+
+ul.nav li:hover a {
+  color: rgb(0, 255, 255);
+}
+
+ul.nav li a {
+  padding: 21px;
+  color: initial;
+  text-decoration: initial;
+}
+.nav-logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 20px; 
+  }
+
+  .nav-logo img {
+    max-height: 50px; 
+  }
+    
+    .hover-image-container {
+        position: relative;
+        margin: 20px;
+      }
+  
+      .hover-image {
+        max-width: 100%;
+        height: auto;
+        transition: filter 0.5s ease;
+        border-radius:15%
+      }
+  
+      .get-started-button-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+  
+      .get-started-button {
+        padding: 15px 40px;
+        background-color: #07b59e;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 17%;
+        text-decoration: none;
+        display: none;
+      }
+  
+      .hover-image-container:hover .hover-image {
+        filter: blur(5px);
+      }
+  
+      .hover-image-container:hover .get-started-button {
+        display: inline-block;
+      }
+      
