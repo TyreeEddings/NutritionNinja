@@ -48,3 +48,7 @@ ul.nav li a {
   .nav-logo img {
     max-height: 50px; 
   }
+
+.charts {
+    display: inline-block;
+    margin: 0 auto;
