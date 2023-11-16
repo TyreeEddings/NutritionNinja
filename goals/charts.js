@@ -1,41 +1,53 @@
-const cal = document.getElementById("daycalchart");
+function formChange() {
+    var d1 = document.getElementById("d1").value
+    var d2 = document.getElementById("d2").value
+    var d3 = document.getElementById("d3").value
+    var d4 = document.getElementById("d4").value
+    var d5 = document.getElementById("d5").value
 
-new Chart(cal, {
-    type: "bar",
-    data: {
-        labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"],
-        datasets: [{
-            label: "Caloric Intake",
-            data: [2501, 2234, 1256, 1633, 2289],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        responsive: false,
-        scales: {
-            y: {
-                beginAtZero: true,
+    const cal = document.getElementById("daycalchart");
+
+    new Chart(cal, {    
+        type: "bar",
+        data: {
+            labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"],
+            datasets: [{
+                label: "Caloric Intake",
+                data: [d1, d2, d3, d4, d5],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                }
             }
         }
-    }
-});
+    });
 
-const dist = document.getElementById("nutridistchart")
+    const dist = document.getElementById("nutridistchart")
 
-new Chart(dist, {
-    type: "pie",
-    data: {
-        labels: ["Carbs", "Proteins", "Fats"],
-        datasets: [{
-            label: "Nutrient Distribution",
-            title: "Nutrient Distribution",
-            data: [30, 50, 20],
-        }]
-    },
-    options: {
-        responsive: false
-    }
-});
+    var carbs = document.getElementById("carbsdata").value
+    var proteins = document.getElementById("proteinsdata").value
+    var fats = document.getElementById("fatsdata").value
+    
+    new Chart(dist, {
+        type: "pie",
+        data: {
+            labels: ["Carbs", "Proteins", "Fats"],
+            datasets: [{
+                label: "Nutrient Distribution",
+                title: "Nutrient Distribution",
+                data: [carbs, proteins, fats],
+            }]
+        },
+        options: {
+            responsive: false
+        }
+    });
+}
 
 const avgdist = document.getElementById("avgdistchart")
 
