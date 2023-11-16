@@ -50,5 +50,6 @@ ul.nav li a {
   }
 
 .charts {
-    display: inline-block;
+    display: block;
     margin: 0 auto;
+
