@@ -17,3 +17,7 @@
 - Vice President: Chris Bonner
 - Chief Developer: David Zhang
 - CMO: Brekken Abel 
+
+## Where can you find the imports used if you want to use them yourself?
+- [Chart.js -- Responsive Datacharts in JavaScript](https://www.chartjs.org/)
+- [ChatGPT -- OpenAI Language Model](https://chat.openai.com/)
