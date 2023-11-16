@@ -52,4 +52,16 @@ ul.nav li a {
 .charts {
     display: block;
     margin: 0 auto;
+}
 
+.daycal {
+    display: inline-block;
+}
+
+.nutridist {
+    display: inline-block;
+}
+
+.avgdist {
+    display: inline-block;
+}
