@@ -26,12 +26,39 @@
         </div>
     </div>
     <div class="main">
+      <div class="chartform">
+        <form action="charts.js" method="get">
+          <fieldset>
+            <legend>Calorie Data</legend>
+            <label for="d1">Day 1</label>
+            <input type="text" id="d1" name="d1"><br>
+            <label for="d1">Day 2</label>
+            <input type="text" id="d2" name="d2"><br>
+            <label for="d1">Day 3</label>
+            <input type="text" id="d3" name="d3"><br>
+            <label for="d1">Day 4</label>
+            <input type="text" id="d4" name="d4"><br>
+            <label for="d1">Day 5</label>
+            <input type="text" id="d5" name="d5">
+          </fieldset>
+          <fieldset>
+            <legend>Macro Data</legend>
+            <label for="carbsdata">Carbohydrate Consumption (Percent)</label>
+            <input type="text" id="carbsdata" name="carbsdata"><br>
+            <label for="proteinsdata">Protein Consumption (Percent)</label>
+            <input type="text" id="proteinsdata" name="proteindata"><br>
+            <label for="fatsdata">Fat Consumption (Percent)</label>
+            <input type="text" id="fatsdata" name="fatsdata">
+          </fieldset>
+          <input type="button" value="Submit" id="chartsbtn" onclick="formChange()">
+        </form>
+      </div>
       <div class="charts">
         <div class="daycal">
           <h3>Caloric Intake</h3>
           <canvas id="daycalchart"></canvas>
         </div>
-        <div clas="nutriinfo">
+        <div class="nutriinfo">
           <div class="nutridist">
             <h3>Your Macro Distribution</h3>
             <canvas id="nutridistchart"></canvas>
@@ -40,8 +67,10 @@
             <h3>Average Macro Distribution</h3>
             <canvas id="avgdistchart"></canvas>
           </div>
+        </div>
       </div>
     </div>
       <script src="charts.js"></script>
+      <script src="jqcharts.js"></script>
   </body>
 </html>
