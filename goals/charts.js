@@ -1,66 +1,48 @@
-function formChange() {
-    var d1 = document.getElementById("d1").value
-    var d2 = document.getElementById("d2").value
-    var d3 = document.getElementById("d3").value
-    var d4 = document.getElementById("d4").value
-    var d5 = document.getElementById("d5").value
-
-    const cal = document.getElementById("daycalchart");
-
-    new Chart(cal, {    
-        type: "bar",
-        data: {
-            labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"],
-            datasets: [{
-                label: "Caloric Intake",
-                data: [d1, d2, d3, d4, d5],
-                borderWidth: 1,
-                backgroundColor: "#36ff40",
-            }]
+const cal = new Chart(document.getElementById("daycalchart"), {    
+    type: "bar",
+    data: {
+        labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"],
+        datasets: [{
+            label: "Caloric Intake",
+            data: [0, 0, 0, 0, 0],
+            borderWidth: 1,
+            backgroundColor: "#36ff40",
+        }]
+    },
+    options: {
+        responsive: false,
+        colors: {
+            forceOverride: true
         },
-        options: {
-            responsive: false,
-            colors: {
-                forceOverride: true
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                }
+        scales: {
+            y: {
+                beginAtZero: true,
             }
         }
-    });
+    }
+});
 
-    const dist = document.getElementById("nutridistchart")
+const dist = new Chart(document.getElementById("nutridistchart"), {
+    type: "pie",
+    data: {
+        labels: ["Carbs", "Proteins", "Fats"],
+        datasets: [{
+            label: "Nutrient Distribution",
+            title: "Nutrient Distribution",
+            data: [0, 0, 0],
+            backgroundColor: [
+                "#ffb026",
+                "#ff3030",
+                "#abff3d"
+            ]
+        }]
+    },
+    options: {
+        responsive: false
+    }
+});
 
-    var carbs = document.getElementById("carbsdata").value
-    var proteins = document.getElementById("proteinsdata").value
-    var fats = document.getElementById("fatsdata").value
-
-    new Chart(dist, {
-        type: "pie",
-        data: {
-            labels: ["Carbs", "Proteins", "Fats"],
-            datasets: [{
-                label: "Nutrient Distribution",
-                title: "Nutrient Distribution",
-                data: [carbs, proteins, fats],
-                backgroundColor: [
-                    "#ffb026",
-                    "#ff3030",
-                    "#abff3d"
-                ]
-            }]
-        },
-        options: {
-            responsive: false
-        }
-    });
-}
-
-const avgdist = document.getElementById("avgdistchart")
-
-new Chart(avgdist, {
+const avgdist = new Chart(document.getElementById("avgdistchart"), {
     type: "pie",
     data: {
         labels: ["Carbs", "Proteins", "Fats"],
@@ -78,3 +60,62 @@ new Chart(avgdist, {
         responsive: false
     }
 });
+
+function formChange() {
+    const newCalData = [
+        parseFloat(document.getElementById("d1").value),
+        parseFloat(document.getElementById("d2").value),
+        parseFloat(document.getElementById("d3").value),
+        parseFloat(document.getElementById("d4").value),
+        parseFloat(document.getElementById("d5").value)
+    ];
+
+    const newDistData = [
+        parseFloat(document.getElementById("carbsdata").value),
+        parseFloat(document.getElementById("proteinsdata").value),
+        parseFloat(document.getElementById("fatsdata").value)
+    ];
+
+    cal.data.datasets[0].data = newCalData;
+    dist.data.datasets[0].data = newDistData;
+
+    cal.update();
+    dist.update();
+}
+
+function upData(event) {
+    if (event) {
+        event.preventDefault();
+    }
+
+    const newCalData = [
+        parseFloat(document.getElementById("d1").value),
+        parseFloat(document.getElementById("d2").value),
+        parseFloat(document.getElementById("d3").value),
+        parseFloat(document.getElementById("d4").value),
+        parseFloat(document.getElementById("d5").value)
+    ];
+
+    const newDistData = [
+        parseFloat(document.getElementById("carbsdata").value),
+        parseFloat(document.getElementById("proteinsdata").value),
+        parseFloat(document.getElementById("fatsdata").value)
+    ];
+
+    cal.data.datasets[0].data = newCalData;
+    dist.data.datasets[0].data = newDistData;
+
+    cal.update();
+    dist.update();
+}
+
+document.getElementById('chartsbtn').addEventListener('click', upData);
+
+function closeForm() {
+    document.getElementById("popupForm").style.display = "none";
+}
+
+function submitForm() {
+    formChange();
+    closeForm();
+}
