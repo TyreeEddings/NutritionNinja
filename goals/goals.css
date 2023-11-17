@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 .header {
+    
     text-align:Center;
     line-height:100px;
     font-family: "Copperplate", "Courier New", monospace;
@@ -22,8 +23,6 @@
     display:inline-block;
     padding:10px;
 }     
-  
-
 
 ul.nav li a {
   transition: color 0.2s linear;
@@ -72,6 +71,18 @@ ul.nav li a {
     padding: 2.5%;
 }
 
+fieldset {
+  display: inline-block;
+}
+
+.macrofield {
+  transform: translate(0%, -57.89%)
+}
+
+.finbuttons {
+  display: block;
+}
+
 .openBtn {
   display: flex;
   justify-content: center;
@@ -94,13 +105,13 @@ ul.nav li a {
   z-index: 9;
 }
 .formPopup {
-  max-width: 700px;
+  max-width: 750px;
   padding: 20px;
   background-color: #fff;
 }
 .formPopup input[type=text] {
-  width: 95%;
-  padding: 15px;
+  width: 90%;
+  padding: 10px;
   margin: 5px 0 20px 0;
   border: none;
   background: #eee;
@@ -116,9 +127,11 @@ ul.nav li a {
   background-color: #8ebf42;
   color: #fff;
   cursor: pointer;
-  width: 25%;
-  margin-bottom: 15px;
+  width: 20%;
+  margin-bottom: 0px;
   opacity: 0.8;
+  transform: translate(200%, -250%);
+  border-radius: 10px;
 }
 .formPopup #btnCancel {
   float: right;
@@ -127,19 +140,17 @@ ul.nav li a {
   background-color: #cc0000;
   color: #fff;
   cursor: pointer;
-  width: 25%;
-  margin-bottom: 15px;
+  width: 20%;
+  margin-bottom: 0px;
   opacity: 0.8;
+  transform: translate(-50%, -250%);
+  border-radius: 10px;
 }
 .formPopup .btn:hover,
 .openButton:hover {
   opacity: 1;
 }
 
-
-
-
-    
 }
  .chatbot-toggler {
       position: fixed;
