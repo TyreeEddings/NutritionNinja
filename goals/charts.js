@@ -14,11 +14,15 @@ function formChange() {
             datasets: [{
                 label: "Caloric Intake",
                 data: [d1, d2, d3, d4, d5],
-                borderWidth: 1
+                borderWidth: 1,
+                backgroundColor: "#36ff40",
             }]
         },
         options: {
             responsive: false,
+            colors: {
+                forceOverride: true
+            },
             scales: {
                 y: {
                     beginAtZero: true,
@@ -32,7 +36,7 @@ function formChange() {
     var carbs = document.getElementById("carbsdata").value
     var proteins = document.getElementById("proteinsdata").value
     var fats = document.getElementById("fatsdata").value
-    
+
     new Chart(dist, {
         type: "pie",
         data: {
@@ -41,6 +45,11 @@ function formChange() {
                 label: "Nutrient Distribution",
                 title: "Nutrient Distribution",
                 data: [carbs, proteins, fats],
+                backgroundColor: [
+                    "#ffb026",
+                    "#ff3030",
+                    "#abff3d"
+                ]
             }]
         },
         options: {
@@ -57,7 +66,12 @@ new Chart(avgdist, {
         labels: ["Carbs", "Proteins", "Fats"],
         datasets: [{
             label: "Average Nutrient Distribution",
-            data: [55, 25, 20]
+            data: [55, 25, 20],
+            backgroundColor: [
+                "#ffb026",
+                "#ff3030",
+                "#abff3d"
+            ]
         }]
     },
     options: {
