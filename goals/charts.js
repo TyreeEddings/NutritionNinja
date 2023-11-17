@@ -1,7 +1,7 @@
 const cal = new Chart(document.getElementById("daycalchart"), {    
     type: "bar",
     data: {
-        labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"],
+        labels: ["Breakfast", "Lunch", "Dinner"],
         datasets: [{
             label: "Caloric Intake",
             data: [0, 0, 0],
