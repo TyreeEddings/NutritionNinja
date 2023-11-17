@@ -28,7 +28,7 @@
     </div>
     <div class="main">
       <div class="openBtn">
-        <button class="openButton" onclick="openForm()"><strong>Input your Data</strong></button>
+        <button class="openButton" onclick="openForm()"><strong>Open Form</strong></button>
       </div>
       <div class="formPopup" id="popupForm">
         <form action="charts.js" method="get">
@@ -45,7 +45,7 @@
             <label for="d5">Day 5</label>
             <input type="text" id="d5" name="d5">
           </fieldset>
-          <fieldset>
+          <fieldset class="macrofield">
             <legend>Macro Data</legend>
             <label for="carbsdata">Carbohydrate Consumption (Percent)</label>
             <input type="text" id="carbsdata" name="carbsdata"><br>
@@ -54,8 +54,10 @@
             <label for="fatsdata">Fat Consumption (Percent)</label>
             <input type="text" id="fatsdata" name="fatsdata">
           </fieldset>
-          <input type="button" value="Submit" class="btn" id="chartsbtn" onclick="submitForm()">
-          <button type="button" id="btnCancel" class="btn" onclick="closeForm()">Close</button>
+          <div class="finbuttons">
+            <input type="button" value="Submit" class="btn" id="chartsbtn" onclick="submitForm()">
+            <button type="button" id="btnCancel" class="btn" onclick="closeForm()">Close</button>
+          </div>
         </form>
       </div>
       <div class="charts">
