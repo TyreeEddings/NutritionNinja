@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 .header {
-    
     text-align:Center;
     line-height:100px;
     font-family: "Copperplate", "Courier New", monospace;
@@ -58,14 +57,20 @@ ul.nav li a {
 
 .daycal {
     display: inline-block;
+    padding: 5%;
+    border-bottom-style: solid;
+    border-bottom-color: black;
 }
 
 .nutridist {
     display: inline-block;
+    padding: 2.5%;
 }
 
 .avgdist {
     display: inline-block;
+    padding: 2.5%;
+}
 
 .openBtn {
   display: flex;
@@ -121,6 +126,8 @@ ul.nav li a {
 .openButton:hover {
   opacity: 1;
 }
+
+
 
 
     
