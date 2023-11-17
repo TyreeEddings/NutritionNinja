@@ -1,52 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 .header {
     
-    text-align:Center;
-    line-height:100px;
-    font-family: "Copperplate", "Courier New", monospace;
-    font-size: 32px;
-    color: #1be5f3;
+  text-align:Center;
+  line-height:100px;
+  font-family: "Copperplate", "Courier New", monospace;
+  font-size: 32px;
+  color: #1b92f3;
 }
 .nav{
-    border:1px solid white;
-    border-width:1px 0;
-    list-style:none;
-    margin:0;
-    padding:0px 70px 70px  ;
-    text-align:center;
-    line-height: 0px
+  border:1px solid white;
+  border-width:1px 0;
+  list-style:none;
+  margin:0;
+  padding:0px 70px 70px  ;
+  text-align:center;
+  line-height: 0px
 }  
 .nav li{
-    display:inline;
+  display:inline;
 }
 .nav a{
-    display:inline-block;
-    padding:10px;
+  display:inline-block;
+  padding:10px;
 }     
 
+
+
 ul.nav li a {
-  transition: color 0.2s linear;
-  font-size: 18px;
+transition: color 0.2s linear;
+font-size: 18px;
 }
 
 ul.nav li:hover a {
-  color: rgb(0, 255, 255);
+color: #1b92f3;
 }
 
 ul.nav li a {
-  padding: 21px;
-  color: initial;
-  text-decoration: initial;
+padding: 21px;
+color: initial;
+text-decoration: initial;
 }
 .nav-logo {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 20px;
-  }
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 20px; 
+}
 
-  .nav-logo img {
-    max-height: 50px; 
-  }
+.nav-logo img {
+  max-height: 50px; 
+}
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 
 .charts {
     display: block;
