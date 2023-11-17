@@ -4,7 +4,7 @@ const cal = new Chart(document.getElementById("daycalchart"), {
         labels: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"],
         datasets: [{
             label: "Caloric Intake",
-            data: [0, 0, 0, 0, 0],
+            data: [0, 0, 0],
             borderWidth: 1,
             backgroundColor: "#36ff40",
         }]
@@ -66,8 +66,6 @@ function formChange() {
         parseFloat(document.getElementById("d1").value),
         parseFloat(document.getElementById("d2").value),
         parseFloat(document.getElementById("d3").value),
-        parseFloat(document.getElementById("d4").value),
-        parseFloat(document.getElementById("d5").value)
     ];
 
     const newDistData = [
@@ -92,8 +90,6 @@ function upData(event) {
         parseFloat(document.getElementById("d1").value),
         parseFloat(document.getElementById("d2").value),
         parseFloat(document.getElementById("d3").value),
-        parseFloat(document.getElementById("d4").value),
-        parseFloat(document.getElementById("d5").value)
     ];
 
     const newDistData = [
