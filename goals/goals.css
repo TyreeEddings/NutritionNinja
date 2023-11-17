@@ -109,18 +109,27 @@ ul.nav li a {
   background-color: #ddd;
   outline: none;
 }
-.formPopup .btn {
-  padding: 12px 20px;
+.formPopup #chartsbtn {
+  display: inline-block;
+  padding: 12px 12px;
   border: none;
   background-color: #8ebf42;
   color: #fff;
   cursor: pointer;
-  width: 100%;
+  width: 25%;
   margin-bottom: 15px;
   opacity: 0.8;
 }
-.formPopup .cancel {
+.formPopup #btnCancel {
+  float: right;
+  padding: 12px 12px;
+  border: none;
   background-color: #cc0000;
+  color: #fff;
+  cursor: pointer;
+  width: 25%;
+  margin-bottom: 15px;
+  opacity: 0.8;
 }
 .formPopup .btn:hover,
 .openButton:hover {
